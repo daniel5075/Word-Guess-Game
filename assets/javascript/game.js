@@ -4,13 +4,13 @@ var losses = 0;
 var guessRemain = 12;
 var birdNames = [
     "robin",
-    "cardinal",
-    "blackbird",
-    "nuthatch",
-    "magpie",
-    "starling",
-    "jay",
-    "nightingale"
+    // "cardinal",
+    // "blackbird",
+    // "nuthatch",
+    // "magpie",
+    // "starling",
+    // "jay",
+    // "nightingale"
 ];
 var bird = "";
 var splitBird = [];
@@ -55,10 +55,11 @@ function checkGuess(letter) {
 
     else {
         checkDuplicateLetter(letter)
-        //     wrongLetter.push(letter);
-        //     guessRemain--;
     }
 }
+
+
+//check for duplicate wrong letter
 function checkDuplicateLetter(checkwrong) {
     var duplicateLetter = false;
     console.log("Check wrong letter " + checkwrong);
@@ -77,7 +78,14 @@ function checkDuplicateLetter(checkwrong) {
     }
 }
 
-
+function photoSound() {
+    // if (birdNames[0]) {
+    const sound = new Audio()
+    sound.src = "../word-guess-game/assets/sounds/robin.mp3"
+    sound.play()
+    // }
+}
+// reset for new game
 function resetme() {
     guessRemain = 12;
     wrongLetter = [];
@@ -89,6 +97,7 @@ function resetme() {
 function isComplete() {
     if (splitBird.toString() === dashesAndCorrectLetters.toString()) {
         wins++;
+        photoSound()
         resetme()
         document.getElementById("winsRunningTotal").innerHTML = " " + wins;
     }
