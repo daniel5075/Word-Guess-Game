@@ -52,34 +52,54 @@ function checkGuess(letter) {
         }
     }
 
+
     else {
-        wrongLetter.push(letter);
-        guessRemain--;
+        checkDuplicateLetter(letter)
+        //     wrongLetter.push(letter);
+        //     guessRemain--;
     }
-    console.log(dashesAndCorrectLetters);
-    console.log(IsLetterInWord);
-
-    function reset() {
-        guessRemain = 0;
-        wrongLetter = [];
-        dashesAndCorrectLetters = [];
-    }
-
 }
+function checkDuplicateLetter(checkwrong) {
+    var duplicateLetter = false;
+    console.log("Check wrong letter " + checkwrong);
+    console.log(wrongLetter.length)
+    for (var i = 0; i < wrongLetter.length; i++) {
+        if (wrongLetter[i] === checkwrong) {
+            duplicateLetter = true;
+            console.log("wrong letter " + wrongLetter[i])
+        }
+    }
+    if (duplicateLetter) { }
+    else {
+        wrongLetter.push(checkwrong);
+        guessRemain--;
+        console.log("gusses remaining " + guessRemain);
+    }
+}
+
+
+function resetme() {
+    guessRemain = 12;
+    wrongLetter = [];
+    dashesAndCorrectLetters = [];
+    startGame()
+}
+
+
 function isComplete() {
     if (splitBird.toString() === dashesAndCorrectLetters.toString()) {
         wins++;
-        reset()
+        resetme()
         document.getElementById("winsRunningTotal").innerHTML = " " + wins;
     }
     else if (guessRemain === 0) {
         losses++;
-        reset()
+        resetme()
         document.getElementById("lossesRunningTotal").innerHTML = " " + losses;
     }
     document.getElementById("birdIsTheWord").innerHTML = " " + dashesAndCorrectLetters.join(" ");
     document.getElementById("remainingGuess").innerHTML = " " + guessRemain;
-    console.log(guessRemain);
+    console.log("bottom guess remain " + guessRemain);
 }
 
 startGame()
@@ -88,7 +108,5 @@ document.onkeyup = function (event) {
     var guesses = String.fromCharCode(event.keyCode).toLowerCase();
     checkGuess(guesses);
     isComplete();
-    document.getElementById("LettersPlayerGuessed").innerHTML = " " + wrongLetter.join(" ");
-    console.log(wrongLetter);
-
+    document.getElementById("letterPlayerGuessed").innerHTML = " " + wrongLetter.join(" ");
 }
