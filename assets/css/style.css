@@ -29,3 +29,8 @@
         margin-right: auto;
         width: 50%;
       }
+      
+      .containerBody{
+        background-image: url(../images/backgroundbirds.jpg);
+        /* opacity: .50; */
+      }
