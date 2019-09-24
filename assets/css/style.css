@@ -1,12 +1,31 @@
 .jumbotron {
+   
     background-image: url(../images/birdflock.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+   
    }
   h1 {
-      text-align: center;
-    font-size: 80px;
-    color: yellow !important;
+        text-align: center;
+        font-size: 80px;
+        color: yellow !important;
     }
+
+    h2, h3 {
+        text-align: center;
+        font-size: 28px;
+        color: #3f13a7 !important;  
+      }
+
+      h2 {
+        border-bottom: thick solid salmon
+      }
+
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
