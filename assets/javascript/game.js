@@ -4,13 +4,13 @@ var losses = 0;
 var guessRemain = 12;
 var birdNames = [
     "robin",
-    // "cardinal",
-    // "blackbird",
-    // "nuthatch",
-    // "magpie",
-    // "starling",
-    // "jay",
-    // "nightingale"
+    "cardinal",
+    "blackbird",
+    "nuthatch",
+    "magpie",
+    "starling",
+    "jay",
+    "nightingale"
 ];
 var bird = "";
 var splitBird = [];
@@ -79,11 +79,52 @@ function checkDuplicateLetter(checkwrong) {
 }
 
 function photoSound() {
-    // if (birdNames[0]) {
-    const sound = new Audio()
-    sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/robin.mp3"
-    sound.play()
-    // }
+    if (birdNames[0]) {
+        const sound = new Audio()
+        sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/robin.mp3"
+        sound.play()
+    }
+    else if (birdNames[1]) {
+        const sound = new Audio()
+        sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/cardinal.mp3"
+        sound.play()
+    }
+
+    else if (birdNames[2]) {
+        const sound = new Audio()
+        sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/blackbird.wav"
+        sound.play()
+    }
+
+    else if (birdNames[3]) {
+        const sound = new Audio()
+        sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/nuthatch.wav"
+        sound.play()
+    }
+
+    else if (birdNames[4]) {
+        const sound = new Audio()
+        sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/magpie.wav"
+        sound.play()
+    }
+
+    else if (birdNames[5]) {
+        const sound = new Audio()
+        sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/starling.wav"
+        sound.play()
+    }
+
+    else if (birdNames[6]) {
+        const sound = new Audio()
+        sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/jay.mp3"
+        sound.play()
+    }
+
+    else (birdNames[7]) {
+        const sound = new Audio()
+        sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/nightingale.mp3"
+        sound.play()
+    }
 }
 // reset for new game
 function resetme() {
