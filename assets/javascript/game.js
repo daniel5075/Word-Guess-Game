@@ -81,7 +81,7 @@ function checkDuplicateLetter(checkwrong) {
 function photoSound() {
     // if (birdNames[0]) {
     const sound = new Audio()
-    sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/robin.mp3g"
+    sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/robin.mp3"
     sound.play()
     // }
 }
