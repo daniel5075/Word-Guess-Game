@@ -34,7 +34,7 @@ function startGame() {
     console.log(bird)
     console.log(dashesAndCorrectLetters);
     document.getElementById("birdIsTheWord").innerHTML = " " + dashesAndCorrectLetters.join(" ");
-    document.getElementById("birdImage").src = "https://daniel5075.github.io/Word-Guess-Game/assets/images/birdflock.jpg"
+    // document.getElementById("birdImage").src = "https://daniel5075.github.io/Word-Guess-Game/assets/images/birdflock.jpg"
 }
 
 // compare guesses to word
@@ -163,7 +163,7 @@ function isComplete() {
 }
 
 startGame()
-
+document.getElementById("birdImage").src = "https://daniel5075.github.io/Word-Guess-Game/assets/images/birdflock2.jpg"
 document.onkeyup = function (event) {
     var guesses = String.fromCharCode(event.keyCode).toLowerCase();
     checkGuess(guesses);
