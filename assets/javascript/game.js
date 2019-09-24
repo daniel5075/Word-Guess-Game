@@ -82,49 +82,57 @@ function photoSound() {
 
     if (bird === "robin") {
         const sound = new Audio()
-        sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/robin.mp3"
-        sound.play()
+        sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/robin.mp3";
+        sound.play();
+        document.getElementById("birdImage").src = "https://daniel5075.github.io/Word-Guess-Game/assets/images/robin.jpg"
     }
     else if (bird === "cardinal") {
         const sound = new Audio()
         sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/cardinal.mp3"
         sound.play()
+        document.getElementById("birdImage").src = "https://daniel5075.github.io/Word-Guess-Game/assets/images/cardinal.jpg"
     }
 
     else if (bird === "blackbird") {
         const sound = new Audio()
         sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/blackbird.wav"
         sound.play()
+        document.getElementById("birdImage").src = "https://daniel5075.github.io/Word-Guess-Game/assets/images/blackbird.jpg"
     }
 
     else if (bird === "nuthatch") {
         const sound = new Audio()
         sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/nuthatch.wav"
         sound.play()
+        document.getElementById("birdImage").src = "https://daniel5075.github.io/Word-Guess-Game/assets/images/nuthatch.jpg"
     }
 
     else if (bird === "magpie") {
         const sound = new Audio()
         sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/magpie.wav"
         sound.play()
+        document.getElementById("birdImage").src = "https://daniel5075.github.io/Word-Guess-Game/assets/images/magpie.jpg"
     }
 
     else if (bird === "starling") {
         const sound = new Audio()
         sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/starling1.wav"
         sound.play()
+        document.getElementById("birdImage").src = "https://daniel5075.github.io/Word-Guess-Game/assets/images/starling.jpg"
     }
 
     else if (bird === "jay") {
         const sound = new Audio()
         sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/jay.mp3"
         sound.play()
+        document.getElementById("birdImage").src = "https://daniel5075.github.io/Word-Guess-Game/assets/images/jay.jpg"
     }
 
     else {
         const sound = new Audio()
         sound.src = "https://daniel5075.github.io/Word-Guess-Game/assets/sounds/nightingale.mp3"
         sound.play()
+        document.getElementById("birdImage").src = "https://daniel5075.github.io/Word-Guess-Game/assets/images/nightingale.jpg"
     }
 }
 // reset for new game
