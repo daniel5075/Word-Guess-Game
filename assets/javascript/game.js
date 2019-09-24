@@ -1,7 +1,7 @@
 // setting variables
 var wins = 0;
 var losses = 0;
-var guessRemain = 12;
+var guessRemain = 9;
 var birdNames = [
     "robin",
     "cardinal",
@@ -138,7 +138,7 @@ function photoSound() {
 }
 // reset for new game
 function resetme() {
-    guessRemain = 12;
+    guessRemain = 9;
     wrongLetter = [];
     dashesAndCorrectLetters = [];
     startGame()
